@@ -24,11 +24,13 @@ class _MyCustomFormState extends State<MyCustomForm> {
   // Create a text controller and use it to retrieve the current value
   // of the TextField.
   final valeur = TextEditingController();
+  final valeur2 = TextEditingController();
 
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
     valeur.dispose();
+    valeur2.dispose();
     super.dispose();
   }
 
@@ -36,7 +38,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calcule de nombres'),
+        title: Text('Calcule de PGCD'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
