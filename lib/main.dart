@@ -60,7 +60,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 // Retrieve the text the that user has entered by using the
                 // TextEditingController.
                 content: Text(
-                  "la factoriel est" + facto().toString(),
+                  "la factoriel est " + facto().toString(),
                 ),
               );
             },
