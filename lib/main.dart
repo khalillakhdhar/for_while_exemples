@@ -68,28 +68,32 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 // Retrieve the text the that user has entered by using the
                 // TextEditingController.
                 content: Text(
-                  "la factoriel est " + facto().toString(),
+                  "la PGCD est " + diviseur().toString(),
                 ),
               );
             },
           );
         },
-        tooltip: 'appuyez pour obtenir le nombre des entier paire !',
+        tooltip: 'appuyez pour obtenir le PGCD !',
         child: Icon(Icons.calculate),
       ),
     );
   }
 
-  facto() {
-    var s = 0;
-    var f = 1;
+  diviseur() {
+    var s1 = 0;
+    var s2 = 0;
 
     try {
-      s = int.parse(valeur.text);
-      for (int i = 2; i <= s; i++) {
-        f = f * i;
+      s1 = int.parse(valeur.text);
+      s2 = int.parse(valeur2.text);
+      while (s1 != s2) {
+        if (s1 > s2)
+          s1 = s1 - s2;
+        else
+          s2 = s2 - s1;
       }
-      return f;
+      return s1;
     } catch (exp) {
       return "il faut donner des entier";
     }
