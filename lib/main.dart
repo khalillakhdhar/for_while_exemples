@@ -72,9 +72,9 @@ class _MyCustomFormState extends State<MyCustomForm> {
     );
   }
 
-  int facto() {
-    int s = 0;
-    int f = 1;
+  facto() {
+    var s = 0;
+    var f = 1;
 
     try {
       s = int.parse(valeur.text);
