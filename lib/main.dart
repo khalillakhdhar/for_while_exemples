@@ -60,8 +60,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
                 // Retrieve the text the that user has entered by using the
                 // TextEditingController.
                 content: Text(
-                  "le nombre des entiers paire dans l'intervalle est" +
-                      paires().toString(),
+                  "la factoriel est" + facto().toString(),
                 ),
               );
             },
@@ -73,16 +72,16 @@ class _MyCustomFormState extends State<MyCustomForm> {
     );
   }
 
-  int paires() {
+  int facto() {
     int s = 0;
-    int nb = 0;
+    int f = 1;
 
     try {
       s = int.parse(valeur.text);
-      for (int i = 1; i <= s; i++) {
-        if (i % 2 == 0) nb++;
+      for (int i = 2; i <= s; i++) {
+        f = f * i;
       }
-      return nb;
+      return f;
     } catch (exp) {
       return -1;
     }
