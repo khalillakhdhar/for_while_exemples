@@ -46,7 +46,13 @@ class _MyCustomFormState extends State<MyCustomForm> {
           TextField(
             controller: valeur,
             decoration: const InputDecoration(
-              hintText: 'votre valeur ici',
+              hintText: 'votre premier entier ici',
+            ),
+          ),
+          TextField(
+            controller: valeur2,
+            decoration: const InputDecoration(
+              hintText: 'votre 2éme entier ici',
             ),
           ),
         ]),
